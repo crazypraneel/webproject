@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head>
+			<title> Starting with Forms </title>
+			
+			<script language="JavaScript" type="text/javascript">
+
+			function validateForm(form){
+			  if (form.fname.value == "") {
+			    alert( "Please enter your name." );
+			    form.email.focus();
+			    return false;
+			  }
+			  return true;
+			}
+			</script>
+	</head>
+
+	<body> 
+		<!-- Form markup-->  
+		
+		<form method = "post" action = "mailto:vmacarthur@ncirl.ie" onsubmit="return validateForm(this);">
+	<table>
+	<tr>	<td>First Name:</td>
+			<td><input name = "fname" type = "text" value = "Your Name Here" tabindex="1" /></td>
+	</tr>
+	<tr>	<td>Middle Initial:</td>
+			<td><input name = "mname" type = "text" size = "3" maxlength = "3" /></td>
+	</tr>
+	<tr>	<td>Surname:</td>
+			<td><input name = "sname" type = "text" /></td>
+	</tr>
+	<tr>	<td>Password:</td>
+			<td><input name = "pwrd" type = "password" /></td>
+	</tr>
+	<tr>	
+			<td><label for = "nLtr">Subscribe to Newsletter</label></td>
+			<td><input type = "checkbox" name = "newsLtr" value = "yes" id = "nLtr" /></td>
+	</tr>
+	<tr>
+		<td>Choose Category</td>
+		<td>A:  <input type = "radio" name = "cat" value = "a" />
+			B:  <input type = "radio" name = "cat" value = "b" />
+			C:	<input type = "radio" name = "cat" value = "c" /> </td>
+		
+	</tr>
+	
+	<tr>
+		<td>Country </td>
+		<td><select multiple name = "country">
+			 <optgroup label="Country" />
+				<option value = "irl">Ireland	</option>
+				<option value = "fr">France	</option>
+				<option value = "eng">England	</option>
+				<option value = "sp">Spain	</option>
+			
+			
+			</select>
+			
+		
+		</td>
+		
+	</tr>
+	
+	</table>	
+		
+		<fieldset>
+		<legend><b>Any Comments:</b></legend>
+		
+		<textarea rows = "10" cols = "50" name = "comments"></textarea> <br />
+	
+		</fieldset>
+		<input type = "submit" value = "Click" />
+		<input type = "reset" />
+		
+		</form>
+		
+		
+
+	
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
